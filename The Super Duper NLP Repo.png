@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>
+The Super Duper NLP Repo  </title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111626330-8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-111626330-8');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Colab notebooks for various tasks in NLP " />
+<link rel="canonical" href=" https://notebooks.quantumstat.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="The Super Duper NLP Repo " />
+<meta property="og:description" content="Colab notebooks for various tasks in NLP " />
+<meta property="og:url"
+    content=" https://notebooks.quantumstat.com/" />
+<meta property="og:image" content="https://notebooks.quantumstat.com/static/images/notebooks.png" />
+<meta property="og:site_name" content="Quantum Stat" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Colab notebooks for various tasks in NLP " />
+<meta name="twitter:title" content="The Super Duper NLP Repo" />
+<meta name="twitter:image" content="https://notebooks.quantumstat.com/static/images/notebooks.png" />
+
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/datatables.min.css">
+<link rel="stylesheet" href="/static/css/notebook.css"> 
+
+<!-- Favicon -->
+<link rel="shortcut&#x20;icon" href="https://quantumstat.com/wp-content/uploads/favicon-32.png" type="image/png" />
+<link rel="icon" href="https://quantumstat.com/wp-content/uploads/favicon-32.png" type="image/png" />
+
+<!-- Apple Touch Icons -->
+<link rel="apple-touch-icon" href="https://quantumstat.com/wp-content/uploads/favicon-57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://quantumstat.com/wp-content/uploads/favicon-72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://quantumstat.com/wp-content/uploads/favicon-114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://quantumstat.com/wp-content/uploads/favicon-144.png" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Open+Sans:400|Raleway:200,300,400&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body class="notebook">
+    
+<div id="qs-container">
+    <header class="qsr-header">
+
+        <nav class="navbar navbar-default">
+            <div class="main-container row">
+                <div class="col-sm-5">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="qs-title">The Super Duper NLP Repo
+                            <div class="qs-empire-mobile">
+                                <a href="https://quantumstat.com">
+                                    <svg width="35" height="35" version="1.1" id="Layer_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" viewBox="0 0 180 180" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0 {
+                                                clip-path: url(#SVGID_2_);
+
+                                            }
+
+                                            .st1 {
+                                                clip-path: url(#SVGID_4_);
+                                                fill: #141d26;
+                                            }
+
+                                            .st2 {
+                                                clip-path: url(#SVGID_4_);
+                                                fill: #00ff00;
+                                            }
+
+                                            .st3 {
+                                                clip-path: url(#SVGID_4_);
+                                                fill: #00ff00;
+                                            }
+                                        </style>
+
+                                        <g id="Artwork_45_1_">
+                                            <g>
+                                                <defs>
+                                                    <rect id="SVGID_1_" x="3.3" y="2.9" width="159.4" height="160">
+                                                    </rect>
+                                                </defs>
+                                                <clipPath id="SVGID_2_">
+                                                    <use xlink:href="#SVGID_1_" style="overflow:visible;"></use>
+                                                </clipPath>
+                                                <g class="st0">
+                                                    <defs>
+                                                        <rect id="SVGID_3_" x="3.3" y="2.9" width="159.4" height="160">
+                                                        </rect>
+                                                    </defs>
+                                                    <clipPath id="SVGID_4_">
+                                                        <use xlink:href="#SVGID_3_" style="overflow:visible;"></use>
+                                                    </clipPath>
+                                                    <path class="st1"
+                                                        d="M82.9,155.2c-39.7,0-72-32.4-72-72.3s32.3-72.3,72-72.3s72,32.4,72,72.3S122.7,155.2,82.9,155.2">
+                                                    </path>
+                                                    <path class="st2"
+                                                        d="M82.9,18.2c35.5,0,64.3,29,64.3,64.6s-28.9,64.6-64.3,64.6s-64.3-29-64.3-64.6S47.5,18.2,82.9,18.2
+                                                                M82.9,2.9c-44,0-79.7,35.8-79.7,80c0,44.2,35.7,80,79.7,80s79.7-35.8,79.7-80C162.6,38.7,127,2.9,82.9,2.9">
+                                                    </path>
+                                                    <path class="st2"
+                                                        d="M150.1,155.9l-51.4-38.3c-3.4-2.5-4.1-7.4-1.6-10.7h0c2.5-3.4,7.4-4.1,10.7-1.6l51.4,38.3
+                                                                c3.4,2.5,4.1,7.4,1.6,10.7C158.3,157.8,153.5,158.5,150.1,155.9">
+                                                    </path>
+                                                    <path class="st3" d="M110.1,54.7c1.1,0,1.9,0.9,1.9,1.9v5.8c0,1.1-0.9,1.9-1.9,1.9H56.4c-1.1,0-1.9-0.9-1.9-1.9v-5.8
+                                                                c0-1.1,0.9-1.9,1.9-1.9H110.1z"></path>
+                                                    <path class="st3" d="M94.1,70.1c1.1,0,1.9,0.9,1.9,1.9v5.8c0,1.1-0.9,1.9-1.9,1.9H56.4c-1.1,0-1.9-0.9-1.9-1.9V72
+                                                                c0-1.1,0.9-1.9,1.9-1.9H94.1z"></path>
+                                                    <path class="st3" d="M74.9,84.8c1.1,0,1.9,0.9,1.9,1.9v5.1c0,1.1-0.9,1.9-1.9,1.9H56.4c-1.1,0-1.9-0.9-1.9-1.9v-5.1
+                                                                c0-1.1,0.9-1.9,1.9-1.9H74.9z"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-7 qs-menu-right">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="qs-empire">
+                                <a class="qs-brand" href="https://quantumstat.com">
+                                    <svg width="35" height="35" version="1.1" id="Layer_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" viewBox="0 0 180 180" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0 {
+                                                clip-path: url(#SVGID_2_);
+
+                                            }
+
+                                            .st1 {
+                                                clip-path: url(#SVGID_4_);
+                                                fill: #141d26;
+                                            }
+
+                                            .st2 {
+                                                clip-path: url(#SVGID_4_);
+                                                fill: #00ff00;
+                                            }
+
+                                            .st3 {
+                                                clip-path: url(#SVGID_4_);
+                                                fill: #00ff00;
+                                            }
+                                        </style>
+
+                                        <g id="Artwork_45_1_">
+                                            <g>
+                                                <defs>
+                                                    <rect id="SVGID_1_" x="3.3" y="2.9" width="159.4" height="160">
+                                                    </rect>
+                                                </defs>
+                                                <clipPath id="SVGID_2_">
+                                                    <use xlink:href="#SVGID_1_" style="overflow:visible;"></use>
+                                                </clipPath>
+                                                <g class="st0">
+                                                    <defs>
+                                                        <rect id="SVGID_3_" x="3.3" y="2.9" width="159.4" height="160">
+                                                        </rect>
+                                                    </defs>
+                                                    <clipPath id="SVGID_4_">
+                                                        <use xlink:href="#SVGID_3_" style="overflow:visible;"></use>
+                                                    </clipPath>
+                                                    <path class="st1"
+                                                        d="M82.9,155.2c-39.7,0-72-32.4-72-72.3s32.3-72.3,72-72.3s72,32.4,72,72.3S122.7,155.2,82.9,155.2">
+                                                    </path>
+                                                    <path class="st2"
+                                                        d="M82.9,18.2c35.5,0,64.3,29,64.3,64.6s-28.9,64.6-64.3,64.6s-64.3-29-64.3-64.6S47.5,18.2,82.9,18.2
+                                                            M82.9,2.9c-44,0-79.7,35.8-79.7,80c0,44.2,35.7,80,79.7,80s79.7-35.8,79.7-80C162.6,38.7,127,2.9,82.9,2.9">
+                                                    </path>
+                                                    <path class="st2"
+                                                        d="M150.1,155.9l-51.4-38.3c-3.4-2.5-4.1-7.4-1.6-10.7h0c2.5-3.4,7.4-4.1,10.7-1.6l51.4,38.3
+                                                            c3.4,2.5,4.1,7.4,1.6,10.7C158.3,157.8,153.5,158.5,150.1,155.9">
+                                                    </path>
+                                                    <path class="st3" d="M110.1,54.7c1.1,0,1.9,0.9,1.9,1.9v5.8c0,1.1-0.9,1.9-1.9,1.9H56.4c-1.1,0-1.9-0.9-1.9-1.9v-5.8
+                                                            c0-1.1,0.9-1.9,1.9-1.9H110.1z"></path>
+                                                    <path class="st3" d="M94.1,70.1c1.1,0,1.9,0.9,1.9,1.9v5.8c0,1.1-0.9,1.9-1.9,1.9H56.4c-1.1,0-1.9-0.9-1.9-1.9V72
+                                                            c0-1.1,0.9-1.9,1.9-1.9H94.1z"></path>
+                                                    <path class="st3" d="M74.9,84.8c1.1,0,1.9,0.9,1.9,1.9v5.1c0,1.1-0.9,1.9-1.9,1.9H56.4c-1.1,0-1.9-0.9-1.9-1.9v-5.1
+                                                            c0-1.1,0.9-1.9,1.9-1.9H74.9z"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">SANDBOX &dArr;</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <a href="https://rabbit.quantumstat.com">Rabbit</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://notebooks.quantumstat.com">Notebooks</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://datasets.quantumstat.com">Datasets</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ai.quantumstat.com/">Chitchat Chatbot</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ai1.quantumstat.com/">Question Answering</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="https://quantumstat.com/blog/">BLOG</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="https://quantumstat.com/contact/">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="qs-teaser">
+            For database updates, follow
+            <a href="https://twitter.com/Quantum_Stat" target="_blank">
+                <i class="qs-twitter"></i>
+            </a>
+            or
+            <a href="https://medium.com/@quantumstat" target="_blank">
+                <i class="qs-medium"></i>
+            </a>
+        </div>
+        <div class="qs-new-updates">updated 04.22.20</div>
+    </header>
+    
+    
+    <div class="container-fluid">
+            
+
+
+
+<div class="row qs-search-toolbar">
+    <div class="pull-left">
+        <label>
+            <input type="text" id="qs-search" class="form-control input-sm" placeholder="Search..."
+                aria-controls="notebook">
+        </label>
+    </div>
+    <div class="pull-right">
+        <div>Want to add a notebook, edit? &nbsp;<div class="qs-contact-button"><a
+                    href="https://quantumstat.com/contact/">Contact</a></div>
+        </div>
+    </div>
+</div>
+</div>
+
+<table id="notebook" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Notebook</th>
+            <th>Added</th>
+            <th>Description</th>
+            <th>Model</th>
+            <th>Task</th>
+            <th>Creator</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+
+        <tr>
+            <td>1.5B GPT2 Pretrained Chinese Model</td>
+            <td>04.22.20</td>
+            <td>Conduct inference on GPT-2 for Chinese Language</td>
+            <td>GPT-2</td>
+            <td>Text Generation</td>
+            <td>Zhibo Zhang</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/imcaspar/gpt2-ml/blob/master/pretrained_model_demo.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>A Simple Neural Network from Scratch with PyTorch and Google Colab</td>
+            <td>04.22.20</td>
+            <td>Demo for building a NN using PyTorch for training</td>
+            <td>NN</td>
+            <td>n/a</td>
+            <td>Elvis Saravia</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/109gHWFUlUzuwhgXROpzIuVoSPZA_qeoy" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>AI Dungeon 2</td>
+            <td>04.22.20</td>
+            <td>Play the game based on GPT-2</td>
+            <td>GPT-2</td>
+            <td>Text Generation</td>
+            <td>Nick Walton</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/nickwalton/AIDungeon/blob/master/AIDungeon_2.ipynb?authuser=6" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>An Introduction to Natural Language in Python using spaCy</td>
+            <td>04.22.20</td>
+            <td>Demo for introducing spaCy for NLP tasks</td>
+            <td>n/a</td>
+            <td>Lemmatizing, Chunking</td>
+            <td>Derwen.ai</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/DerwenAI/spaCy_tuTorial/blob/master/spaCy_tuTorial.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Analyze Text Data with Yellowbrick</td>
+            <td>04.22.20</td>
+            <td>Demo for vectorizing and visualizing documents with various techniques</td>
+            <td>Various</td>
+            <td>Embeddings</td>
+            <td>Yelyzaveta L</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/ElizaLo/NLP-Natural-Language-Processing/blob/master/Analyze%20Text%20Data%20with%20Yellowbrick/Analyze%20Text%20Data%20with%20Yellowbrick.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>BBC Text Classification</td>
+            <td>04.22.20</td>
+            <td>Demo for training an ensemble of classical ML models from SKLearn for text classification</td>
+            <td>Ensemble</td>
+            <td>Text Classification</td>
+            <td>srushtidhope</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/srushtidhope/bbc-text-classification/blob/master/bbc_text_classification.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>BERT Fine-Tuning Tutorial with PyTorch</td>
+            <td>04.22.20</td>
+            <td>Demo for fine-tuning BERT on the CoLA dataset for sentence classification</td>
+            <td>BERT</td>
+            <td>Sentence Classification</td>
+            <td>Chris McCormick, Nick Ryan</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1pTuQhug6Dhl9XalKB0zUGf4FIdYFlpcX" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>BERT Generator</td>
+            <td>04.22.20</td>
+            <td>Using BERT in DeepPavlov&#39;s framework to decode and conduct text generation </td>
+            <td>BERT</td>
+            <td>Text Generation</td>
+            <td>DeepPavlov</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/deepmipt/DeepPavlov/blob/docs/transformers-tutorial/examples/bert_generator.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>BERT Word Embeddings Tutorial</td>
+            <td>04.22.20</td>
+            <td>Demo for understanding word embeddings with BERT</td>
+            <td>BERT</td>
+            <td>Embeddings</td>
+            <td>Chris McCormick, Nick Ryan</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1ZQvuAVwA3IjybezQOXnrXMGAnMyZRuPU" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>BERT-Torch</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using BERT for predicting masked tokens</td>
+            <td>BERT</td>
+            <td>Predict Masked Tokens</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/5-2.BERT/BERT_Torch.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Bangla Article Classification With TF-Hub</td>
+            <td>04.22.20</td>
+            <td>Demo for training a NN for text classification on a non-English Language with TF-Hub</td>
+            <td>NN</td>
+            <td>Text Classification</td>
+            <td>TensorFlow</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/bangla_article_classifier.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Basic Self-Attention</td>
+            <td>04.22.20</td>
+            <td>Guide for understanding the self-attention model</td>
+            <td>Self-Attention</td>
+            <td>n/a</td>
+            <td>Manuel Romero</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/mrm8488/shared_colab_notebooks/blob/master/basic_self_attention_.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Bert For Arabic QA</td>
+            <td>04.22.20</td>
+            <td>Demo for fine-tuning BERT on the Arabic-SQuAD dataset</td>
+            <td>BERT</td>
+            <td>Question Answering</td>
+            <td>Hussein Mozannar</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/19a_jIKpjhQez0KTa_Qwh2BW2nryGXzhb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>COVID 19 BERT Research Papers Semantic Search</td>
+            <td>04.22.20</td>
+            <td>Demo for creating a semantic search engince to search for COVID related research papers</td>
+            <td>BERT</td>
+            <td>Semantic Search</td>
+            <td>theamrzaki</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/theamrzaki/COVID-19-BERT-ResearchPapers-Semantic-Search/blob/master/COVID_19_BERT_ResearchPapers_Semantic_Search.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Chatbot Tutorial</td>
+            <td>04.22.20</td>
+            <td>Demo for building a chit chat chatbot</td>
+            <td>Seq2Seq</td>
+            <td>Dialogue</td>
+            <td>Matthew Inkawhich</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1Qs6m-gZ7It53hmMbCNGST962cycQWRvW" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Classification on DeepPavlov</td>
+            <td>04.22.20</td>
+            <td>Demo for training a CNN model for text classification</td>
+            <td>CNN</td>
+            <td>Intent Classification</td>
+            <td>DeepPavlov</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/deepmipt/DeepPavlov/blob/master/examples/classification_tutorial.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Classify Airbnb Reviews with NLP</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using BERT for sentiment analysis</td>
+            <td>BERT</td>
+            <td>Sentiment Analysis</td>
+            <td>Tom Furu</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1iEw-BfpPNhhELha7l79FfKTdlTkNpYrA" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Classifying Names with a Character-Level RNN</td>
+            <td>04.22.20</td>
+            <td>Demo for building a model to classify words for their language of origin</td>
+            <td>RNN</td>
+            <td>Text Classification</td>
+            <td>Sean Robertson</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1OvOe4dsd7VFymz2PE2r1BMHiJtglBeu1" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Codalab Emocontext Language Competition</td>
+            <td>04.22.20</td>
+            <td>Demo for training a model to classify emotion from dialogue</td>
+            <td>BERT</td>
+            <td>Text Classification</td>
+            <td>Petros Christodoulou</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1WJ-AmYzJLV7Joshl6UxtVGU-wuGJOufu" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Codalab Offensive Language Competition</td>
+            <td>04.22.20</td>
+            <td>Demo for training BERT to classify offensive language text</td>
+            <td>BERT</td>
+            <td>Text Classification</td>
+            <td>Petros Christodoulou</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1AstCNMK5_5MMKznrcKslUCFMCCNXk_ae" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Cross-Lingual Similarity and Semantic Search Engine with Multilingual Universal Sentence Encoder</td>
+            <td>04.22.20</td>
+            <td>Demo for using the Multilingual Universal Sentence Encoder module and use it for sentence similarity across multiple languages.</td>
+            <td>Universal Sentence Encoder</td>
+            <td>Semantic Text Similarity</td>
+            <td>TensorFlow</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/semantic_similarity_with_tf_hub_universal_encoder.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>DialoGPT- Chatbot</td>
+            <td>04.22.20</td>
+            <td>Demo for using the DialoGPT chatbot</td>
+            <td>GPT-2</td>
+            <td>Dialogue</td>
+            <td>Hugging Face</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1uib2-bxqYKR3lRdEmOh_MaWBGrMrPOUL" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>E2E-TTS using ESPnet-TTS and ParallelWaveGAN (+ MelGAN)</td>
+            <td>04.22.20</td>
+            <td>Text to Speech demo for English, Japanese, and Mandarin</td>
+            <td>Various</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/espnet/notebook/blob/master/tts_realtime_demo.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>ESPnet Speech Translation Demonstration</td>
+            <td>04.22.20</td>
+            <td>Demo for Spanish to English speech translation and English speech generation</td>
+            <td>ESPnet</td>
+            <td>Speech Translation</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/espnet/notebook/blob/master/st_demo.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>English Text To Speech</td>
+            <td>04.22.20</td>
+            <td>An English female voice (LJSpeech) demo using tugstugi/pytorch-dc-tts with the Griffin-Lim algorithm</td>
+            <td>CNN w/ Attention</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/pytorch-dc-tts/blob/master/notebooks/EnglishTTS.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Extracting Text from PDF Files</td>
+            <td>04.22.20</td>
+            <td>Demo for using a PDF text extractor</td>
+            <td>n/a</td>
+            <td>Information Extraction</td>
+            <td>Derwen.ai</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/DerwenAI/spaCy_tuTorial/blob/master/Extract_Text_from_PDF.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>FastText Template</td>
+            <td>04.22.20</td>
+            <td>Demo using FastText template for training and inference</td>
+            <td>FastText</td>
+            <td>Sentence Classification</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/1-3.FastText/FastText.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Fundamentals of NLP: Tokenization, Lemmatization, Stemming, and Sentence Segmentation</td>
+            <td>04.22.20</td>
+            <td>Demo for executing various NLP techniques via Spacy and NLTK</td>
+            <td>n/a</td>
+            <td>Various</td>
+            <td>Elvis Saravia</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/mrm8488/shared_colab_notebooks/blob/master/nlp_basics_tokenization_segmentation.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>GPT-2 that Runs from Colab with Javascript Interface</td>
+            <td>04.22.20</td>
+            <td>Demo for training GPT-2 1.5B inference w/ front end</td>
+            <td>GPT-2</td>
+            <td>Text Generation</td>
+            <td>Manuel Romero</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/mrm8488/shared_colab_notebooks/blob/master/GPT2_with_JS_UI.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Generating Names with a Character-Level RNN</td>
+            <td>04.22.20</td>
+            <td>Demo for building a model to generate words from their language of origin</td>
+            <td>RNN</td>
+            <td>Text Generation</td>
+            <td>Sean Robertson</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/165YAVmrWuuM-ESZ2ELUJahkpgH3fyTAF" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Getting Started Transformers</td>
+            <td>04.22.20</td>
+            <td>Intro to transformers, different frameworks, and inference</td>
+            <td>BERT, DistilBERT</td>
+            <td>Tutorial</td>
+            <td>Hugging Face</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/huggingface/transformers/blob/master/notebooks/02-transformers.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Git Quora Insincere Questions Classification</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference several models on the Quora Insincere Questions dataset</td>
+            <td>RNN, LSTM</td>
+            <td>Text Classification</td>
+            <td>Abeer Abu Zayed</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/AbeerAbuZayed/Quora-Insincere-Questions-Classification/blob/master/Quora_Insincere_Questions_Classification.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Goal-Oriented Bot in DeepPavlov</td>
+            <td>04.22.20</td>
+            <td>Demo for building goal-oriented chatbot using DeepPavlov&#39;s framework</td>
+            <td>RNN</td>
+            <td>Dialogue</td>
+            <td>DeepPavlov</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/deepmipt/DeepPavlov/blob/master/examples/gobot_extended_tutorial.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Google JSON API Custom Search Engine for Pywombat</td>
+            <td>04.22.20</td>
+            <td>Use Google&#39;s Custom Search engine API to search about the topic of exercise</td>
+            <td>API</td>
+            <td>Search</td>
+            <td>Oleksis Fraga Menйndez</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/oleksis/notebooks/blob/master/customsearch_api_pywombat_live.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Graph Construction</td>
+            <td>04.22.20</td>
+            <td>Demo for building a graph model for ranking text</td>
+            <td>PageRank</td>
+            <td>Ranking</td>
+            <td>Derwen.ai</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/DerwenAI/spaCy_tuTorial/blob/master/Text_Rank.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Hotel Review Sentiment Analysis Machine Learning</td>
+            <td>04.22.20</td>
+            <td>Demo for training and evaluating an LSTM for sentiment analysis on tweets</td>
+            <td>Logistic Regression</td>
+            <td>Sentiment Analysis</td>
+            <td>RaihanAk</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/RaihanAk/Hotel-Review-Sentiment-Analysis_MachineLearning/blob/master/Hotel%20Review%20Sentiment%20Analysis.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>How to Build a Simple Text Classifier With TF-Hub</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference on the IMDB Movie Dataset </td>
+            <td>NNLM</td>
+            <td>Sentiment Analysis</td>
+            <td>TensorFlow Hub</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tensorflow/hub/blob/master/docs/tutorials/text_classification_with_tf_hub.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>How to Build a Simple Text Classifier with TF-Hub</td>
+            <td>04.22.20</td>
+            <td>Demo for training a NN for text classification with TF-Hub</td>
+            <td>NN</td>
+            <td>Text Classification</td>
+            <td>TensorFlow</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tensorflow/hub/blob/master/docs/tutorials/text_classification_with_tf_hub.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>How to Generate Text</td>
+            <td>04.22.20</td>
+            <td>Learn to use using different decoding methods for language generation with Transformers</td>
+            <td>GPT-2</td>
+            <td>Text Generation</td>
+            <td>Hugging Face</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/huggingface/blog/blob/master/notebooks/02_how_to_generate.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>How to Generate Text: Using Different Decoding Methods for Language Generation with Transformers</td>
+            <td>04.22.20</td>
+            <td>Demo for using various decoding parameters in GPT-2 inference</td>
+            <td>GPT-2</td>
+            <td>Text Generation</td>
+            <td>Patrick von Platen</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/huggingface/blog/blob/master/notebooks/02_how_to_generate.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>How to Train a Language Model</td>
+            <td>04.22.20</td>
+            <td>Use a large web crawled dataset to train a transformer from scratch</td>
+            <td>RoBERTa</td>
+            <td>Language Modeling</td>
+            <td>Hugging Face</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/huggingface/blog/blob/master/notebooks/01_how_to_train.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>How to Use Pipelines</td>
+            <td>04.22.20</td>
+            <td>Transformers pipelines provides a high-level, easy to use, API for doing inference over a variety of downstream-tasks, including: Sentence classification, Token classification, Question Answering, Mask-Filling, Feature Extraction</td>
+            <td>Various</td>
+            <td>Fine-Tuning</td>
+            <td>Hugging Face</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/huggingface/transformers/blob/master/notebooks/03-pipelines.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Hybrid Goal-Oriented Bot</td>
+            <td>04.22.20</td>
+            <td>Train a goal-oriented chatbot using DeepPavlov&#39;s framework</td>
+            <td>RNN</td>
+            <td>Dialogue</td>
+            <td>DeepPavlov</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/deepmipt/dp_tutorials/blob/master/Tutorial_3_Hybrid_bot.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Inference Demo for Mellotron on Google COLAB</td>
+            <td>04.22.20</td>
+            <td>Conduct inference on Mellotron: a multispeaker voice synthesis model based on Tacotron 2 GST that can make a voice emote and sing without emotive or singing training data.</td>
+            <td>Mellotron</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/yhgon/mellotron/blob/master/inference_colab.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Keras OCR</td>
+            <td>04.22.20</td>
+            <td>Demo for OCR inference</td>
+            <td>CRNN</td>
+            <td>Optical Character Recognition (OCR)</td>
+            <td>Manuel Romero</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/mrm8488/shared_colab_notebooks/blob/master/keras_ocr_custom.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Keras Overview</td>
+            <td>04.22.20</td>
+            <td>Demo for getting an in-depth introduction to TensorFlow</td>
+            <td>NN</td>
+            <td>n/a</td>
+            <td>TensorFlow</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/guide/keras/overview.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Mongolian Text To Speech with Tacotron</td>
+            <td>04.22.20</td>
+            <td>This is a Mongolian text to speech inference demo using the data from the Mongolian Bible audio book with Tacotron</td>
+            <td>Tacotron</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/mongolian-nlp/blob/master/misc/Tacotron_MongolianTTS.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Morpho Tagger</td>
+            <td>04.22.20</td>
+            <td>Demo for using a morphological tagger</td>
+            <td>n/a</td>
+            <td>Morphological Tagging</td>
+            <td>DeepPavlov</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/deepmipt/DeepPavlov/blob/master/examples/morphotagger_example.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Multi-Lingual BERT on XQUAD - Cased</td>
+            <td>04.22.20</td>
+            <td>Demo for using Multi-Lingual BERT for translation on 11 languages</td>
+            <td>BERT</td>
+            <td>Machine Translation</td>
+            <td>Manuel Romero</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/mrm8488/shared_colab_notebooks/blob/master/Try_mrm8488_xquad_finetuned_model.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Multi-Lingual BERT on XQUAD - Uncased</td>
+            <td>04.22.20</td>
+            <td>Demo for using Multi-Lingual BERT for translation on 11 languages</td>
+            <td>BERT</td>
+            <td>Machine Translation</td>
+            <td>Manuel Romero</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/mrm8488/shared_colab_notebooks/blob/master/Try_mrm8488_xquad_finetuned_uncased_model.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Neural Network Language Model</td>
+            <td>04.22.20</td>
+            <td>Train and infer with language model</td>
+            <td>n/a</td>
+            <td>Language Modeling</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/1-1.NNLM/NNLM_Tensor.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Persian Sentiment Analysis With LSTM &amp; Fasttext</td>
+            <td>04.22.20</td>
+            <td>Demo for training an LSTM for sentiment analysis in Persian</td>
+            <td>LSTM</td>
+            <td>Sentiment Analysis</td>
+            <td>Alireza Keshavarz</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/ashalogic/Persian-Sentiment-Analyzer/blob/master/Tutorial.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Pipeline Example Performing the Bert Preprocessing with TensorFlow Transform</td>
+            <td>04.22.20</td>
+            <td>Demo and tutorial using TFX for production-level ML pipeline using BERT</td>
+            <td>BERT</td>
+            <td>Sentiment Analysis</td>
+            <td>TensorFlow</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tensorflow/workshops/blob/master/blog/TFX_Pipeline_for_Bert_Preprocessing.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Pointer Generator Seq2Seq Network</td>
+            <td>04.22.20</td>
+            <td>Implementation uses the concept of having a pointer generator network to diminish some problems that appears with the normal seq2seq network</td>
+            <td>Seq2Seq</td>
+            <td>Summarization</td>
+            <td>theamrzaki</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/theamrzaki/text_summurization_abstractive_methods/blob/master/Implementation%20B%20(Pointer%20Generator%20seq2seq%20network)/Model_4_generator_.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Predicting Movie Review Sentiment with BERT on TF Hub</td>
+            <td>04.22.20</td>
+            <td>Sentiment analysis using BERT</td>
+            <td>BERT</td>
+            <td>Sentiment Analysis</td>
+            <td>FirmAI</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/google-research/bert/blob/master/predicting_movie_reviews_with_bert_on_tf_hub.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Question Answering with a Fine-Tuned BERT</td>
+            <td>04.22.20</td>
+            <td>Demo and tutorial using BERT for conducting inference on question answering</td>
+            <td>BERT</td>
+            <td>Question Answering</td>
+            <td>Chris McCormick</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1uSlWtJdZmLrI3FCNIlUHFxwAJiSu2J0-#scrollTo=W-1zl5XdYInf" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Scene Text Detection with CRAFT</td>
+            <td>04.22.20</td>
+            <td>This notebook uses an open source implementation of the paper Character Region Awareness for Text Detection to detect scene text on a given image.</td>
+            <td>CRAFT</td>
+            <td>Scene Text Detection</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/CRAFT.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Scene Text Detection with EAST</td>
+            <td>04.22.20</td>
+            <td>This notebook uses ResNet o detect text areas on a given image.</td>
+            <td>ResNet-50</td>
+            <td>Scene Text Detection</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/EAST.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Scene Text Detection with PixelLink</td>
+            <td>04.22.20</td>
+            <td>This notebook uses PixelLink to detect text areas on a given image.</td>
+            <td>PixelLink</td>
+            <td>Scene Text Detection</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/PixelLink.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Semantic Search with Approximate Nearest Neighbors and Text Embeddings from TF-Hub</td>
+            <td>04.22.20</td>
+            <td>Demo for building an approximate nearest neighbours (ANN) index using extracted embeddings</td>
+            <td>ANN</td>
+            <td>Semantic Text Similarity</td>
+            <td>TensorFlow</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/semantic_approximate_nearest_neighbors.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Sentence Classification with Word Embeddings</td>
+            <td>04.22.20</td>
+            <td>Learn how to conduct sentence classfiication using DeepPavlov Framework</td>
+            <td>CNN</td>
+            <td>Sentence Classification</td>
+            <td>DeepPavlov</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/deepmipt/dp_tutorials/blob/master/Tutorial_1_Sentence_classification_with_word_embeddings.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Sentiment Analysis with LSTM</td>
+            <td>04.22.20</td>
+            <td>Demo for training and evaluating an LSTM for sentiment analysis on tweets</td>
+            <td>LSTM</td>
+            <td>Sentiment Analysis</td>
+            <td>Rohit Kumar</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/Greybeast/Sentiment-Classification-LSTM/blob/master/Sentiment%20Classification%20LSTM.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Seq2Seq(Attention)-Tensor</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using Seq2Seq model for sentence translation</td>
+            <td>Seq2Seq w/ Attention</td>
+            <td>Machine Translation</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/4-2.Seq2Seq(Attention)/Seq2Seq(Attention)_Tensor.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Seq2Seq(Attention)-Torch</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using Seq2Seq model for sentence translation</td>
+            <td>Seq2Seq w/ Attention</td>
+            <td>Machine Translation</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/4-2.Seq2Seq(Attention)/Seq2Seq(Attention)_Torch.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Seq2Seq-Tensor</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using Seq2Seq model for word translation</td>
+            <td>Seq2Seq</td>
+            <td>Machine Translation</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/4-1.Seq2Seq/Seq2Seq_Tensor.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Seq2Seq-Torch</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using Seq2Seq model for word translation</td>
+            <td>Seq2Seq</td>
+            <td>Machine Translation</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/4-1.Seq2Seq/Seq2Seq_Torch.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Sequence Classification with Transformers</td>
+            <td>04.22.20</td>
+            <td>Demo for fine-tuning transfomers for sentence classification on the Microsoft Research Paraphrase Corpus (MRPC) </td>
+            <td>BERT, RoBERTa</td>
+            <td>Sentence Classification</td>
+            <td>Hugging Face</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1l39vWjZ5jRUimSQDoUcuWGIoNjLjA2zu" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Sequence Classification with Transformers using TensorFlow&#39;s Strategies</td>
+            <td>04.22.20</td>
+            <td>Demo for fine-tuning DistilBERT on Microsoft Research Paraphrase Corpus (MRPC), on a TPU</td>
+            <td>DistilBERT</td>
+            <td>Sentence Classification</td>
+            <td>Hugging Face</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1yWaLpCWImXZE2fPV0ZYDdWWI8f52__9A" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Simple bot in DeepPavlov</td>
+            <td>04.22.20</td>
+            <td>Demo for building a chit chat chatbot</td>
+            <td>RNN</td>
+            <td>Dialogue</td>
+            <td>DeepPavlov</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/deepmipt/DeepPavlov/blob/master/examples/gobot_tutorial.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>SpaCy Transformers Demo</td>
+            <td>04.22.20</td>
+            <td>Demo for using transformers in Spacy&#39;s module, and shows sentiment classifer XL-Net example</td>
+            <td>BERT, XL-Net</td>
+            <td>Sentiment Analysis</td>
+            <td>Spacy</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1lG3ReZc9ESyVPsstjuu5ek73u6vVsi3X" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Spam Detection</td>
+            <td>04.22.20</td>
+            <td>Demo for using several classical ML models to classify spam</td>
+            <td>Various</td>
+            <td>Text Classification</td>
+            <td>Yelyzaveta L</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/ElizaLo/ML-using-Jupiter-Notebook-and-Google-Colab/blob/master/Spam%20Detection/Spam_Detection.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Speech Recognition with DeepSpeech</td>
+            <td>04.22.20</td>
+            <td>Demo for transcribing YouTube videos</td>
+            <td>DeepSpeech</td>
+            <td>Speech Recognition</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/MozillaDeepSpeech.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Speech Recognition with Jasper</td>
+            <td>04.22.20</td>
+            <td>Demo using Jasper to transcribe a given YouTube video</td>
+            <td>Jasper</td>
+            <td>Speech Recognition</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/NVidiaJasper.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Speech Recognition with QuartzNet</td>
+            <td>04.22.20</td>
+            <td>Demo using QuartzNet to transcribe a given YouTube video</td>
+            <td>QuatzNet</td>
+            <td>Speech Recognition</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/NVidiaQuartzNet.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Speech Recognition with QuartzNet w/ microphone</td>
+            <td>04.22.20</td>
+            <td>Demo using QuartzNet to transcribe a speech from microphone</td>
+            <td>QuatzNet</td>
+            <td>Speech Recognition</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/NVidiaQuartzNetMic.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Speech Recognition with Wav2Letter+</td>
+            <td>04.22.20</td>
+            <td>Demo using Wav2Letter+ to transcribe a given YouTube video</td>
+            <td>Wav2Letter+</td>
+            <td>Speech Recognition</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/NVidiaWav2LetterPlus.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Synthesize</td>
+            <td>04.22.20</td>
+            <td>Text to Speech demo</td>
+            <td>Tacotron</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/as-ideas/ForwardTacotron/blob/master/notebooks/synthesize.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>T5 Evaluate WMT</td>
+            <td>04.22.20</td>
+            <td>Demo for using T5 on the WMT English to German dataset</td>
+            <td>T5</td>
+            <td>Machine Translation</td>
+            <td>Manuel Romero</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/mrm8488/shared_colab_notebooks/blob/master/T5_evaluate_WMT.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Tacotron2: WaveNet-Based Text-to-Speech Demo</td>
+            <td>04.22.20</td>
+            <td>This is a proof of concept for Tacotron2 text-to-speech synthesis. Models used here were trained on LJSpeech dataset.</td>
+            <td>Tacotron 2, WaveNet</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/r9y9/Colaboratory/blob/master/Tacotron2_and_WaveNet_text_to_speech_demo.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Text Classification AI Workshop</td>
+            <td>04.22.20</td>
+            <td>Use several models like tf-idf, RNN, and CNN to classify text</td>
+            <td>RNN, CNN</td>
+            <td>Text Classification</td>
+            <td>Saiph Savage and Carlos Toxtli</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1twc5dBjgFLFuv8p-gPfnrscTPcBlkx5q" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Text Classification Movie Reviews</td>
+            <td>04.22.20</td>
+            <td>Demo for training a neural network on th IMDB movie review dataset</td>
+            <td>NN</td>
+            <td>Text Classification</td>
+            <td>Garrik Hoyt</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/GarrikH/MovieReviews_TextClassification/blob/master/Text_Classification_MovieReviews_Public.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Text Classification in Polish with ULMFiT and Fastai</td>
+            <td>04.22.20</td>
+            <td>Demo for training ULMFiT and fastai model in Polish for classification</td>
+            <td>ULMFiT</td>
+            <td>Sentence Classification</td>
+            <td>Darek Kleczek</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1n3QQcagr9QjZogae6u5G41RxI4l5Mk9g" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Text Summarization with BART &amp; T5</td>
+            <td>04.22.20</td>
+            <td>Demo for conducting inference using T5 and BART for summarization</td>
+            <td>T5, BART</td>
+            <td>Summarization</td>
+            <td>Moritz Laurer</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1iAIFX1QQiFm1F01vMmnAgFh4oH1H-K8W" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Text-to-Speech with Mozilla Tacotron+WaveRNN</td>
+            <td>04.22.20</td>
+            <td>This is an English female voice TTS demo using open source projects mozilla/TTS and erogol/WaveRNN</td>
+            <td>Tacotron, WaveRNN</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/Mozilla_TTS_WaveRNN.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Text-to-Speech with Tacotron+WaveRNN</td>
+            <td>04.22.20</td>
+            <td>An English female voice TTS demo using an open source project fatchord/WaveRNN</td>
+            <td>Tacotron, WaveRNN</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/fatchordWaveRNN.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Text-to-Speech with Tacotron2 and Waveglow</td>
+            <td>04.22.20</td>
+            <td>This is an English female voice text-to-speech demo using open source projects NVIDIA/tacotron2 and NVIDIA/waveglow.</td>
+            <td>Tacotron 2, WaveGlow</td>
+            <td>Text-to-Speech</td>
+            <td>Erdene-Ochir Tuguldur</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/NVidia_Tacotron2_Waveglow.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>TextCNN-Tensor</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference for sentiment analysis</td>
+            <td>CNN</td>
+            <td>Sentence Sentiment Analysis</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/2-1.TextCNN/TextCNN_Tensor.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>TextCNN-Torch</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference for sentiment analysis</td>
+            <td>CNN</td>
+            <td>Sentence Sentiment Analysis</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/2-1.TextCNN/TextCNN_Torch.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>TextLSTM-Tensor</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using LSTM model for character auto-complete</td>
+            <td>LSTM</td>
+            <td>Character Modeling</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/3-2.TextLSTM/TextLSTM_Tensor.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>TextLSTM-Torch</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using LSTM model for character auto-complete</td>
+            <td>LSTM</td>
+            <td>Character Modeling</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/3-2.TextLSTM/TextLSTM_Torch.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>TextRNN-Tensor</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using an RNN model for language modeling</td>
+            <td>RNN</td>
+            <td>Language Modeling</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/3-1.TextRNN/TextRNN_Tensor.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>TextRNN-Torch</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using an RNN model for language modeling</td>
+            <td>RNN</td>
+            <td>Language Modeling</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/3-1.TextRNN/TextRNN_Torch.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Tokenization Doesn&#39;t Have to be Slow!</td>
+            <td>04.22.20</td>
+            <td>Learn how to train and use tokenizers</td>
+            <td>Tokenizer</td>
+            <td>Tokenizing</td>
+            <td>Hugging Face</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/huggingface/transformers/blob/master/notebooks/01-training-tokenizers.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Topic Modeling for Everybody with Google Colab</td>
+            <td>04.22.20</td>
+            <td>Demo for topic modeling inference</td>
+            <td>NMF, LDA</td>
+            <td>Topic Modeling</td>
+            <td>Aneesha Bakharia</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/aneesha/googlecolab_topicmodeling/blob/master/colab_topicmodeling.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Topic Modelling in Python with NLTK and Gensim</td>
+            <td>04.22.20</td>
+            <td>Demo for using LDA for topic modeling</td>
+            <td>LDA</td>
+            <td>Topic Modeling</td>
+            <td>Rajiv Kale</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/Arpita2012/NLP/blob/master/1.51_Topic_Modelling_in_Python_with_NLTK_and_Gensim.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Toxic Comment Classification (Kaggle) - Simple Baseline</td>
+            <td>04.22.20</td>
+            <td>Demo for training GRU to classify toxic comment classification from Kaggle</td>
+            <td>GRU</td>
+            <td>Text Classification</td>
+            <td>Petros Christodoulou</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1tn5khO1arRJP__wU4O75k8FMj4KrWiVt" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Train Your Own Text Generator Using a Recurrent Neural Network!</td>
+            <td>04.22.20</td>
+            <td>Demo for using RNN for generating text</td>
+            <td>RNN</td>
+            <td>Text Generation</td>
+            <td>Mohamed Abdulaziz</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/demmojo/colabrnn/blob/master/colabRNN.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Train a GPT-2 Text-Generating Model w/ GPU For Free</td>
+            <td>04.22.20</td>
+            <td>Learn how to fine-tune and conduct inference using GPT-2 for text generation</td>
+            <td>GPT-2</td>
+            <td>Fine-Tuning, Text Generation</td>
+            <td>Max Woolf</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Transfer Learning with BERT</td>
+            <td>04.22.20</td>
+            <td>Conduct Inference on various tasks using DeepPavlov&#39;s framework</td>
+            <td>BERT</td>
+            <td>Classification, Named Entity Recognition (NER), Question Answering (QA)</td>
+            <td>DeepPavlov</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/deepmipt/dp_tutorials/blob/master/Tutorial_2_DeepPavlov_BERT_transfer_learning.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Transformer(Greedy_decoder)</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using a transformer model w/ greedy decoding for sentence translation</td>
+            <td>Transformer</td>
+            <td>Machine Translation</td>
+            <td>Tae Hwan Jung &amp; Derek Miller</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/5-1.Transformer/Transformer(Greedy_decoder)_Torch.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Transformer-Torch</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using a transformer model for sentence translation</td>
+            <td>Transformer</td>
+            <td>Machine Translation</td>
+            <td>Tae Hwan Jung &amp; Derek Miller</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/5-1.Transformer/Transformer_Torch.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Translation with a Sequence to Sequence Network and Attention</td>
+            <td>04.22.20</td>
+            <td>Demo for building a model to translate words from French to English</td>
+            <td>Seq2Seq w/ Attention</td>
+            <td>Machine Translation</td>
+            <td>Sean Robertson</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1ixOr2JarQUfUL5mioVjD9QV3xpj6c36S" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Twitter Pulse Checker</td>
+            <td>04.22.20</td>
+            <td>Scrapes Tweets related to the Topic you are interested in. Extracts relevant Tags from the text (NER: Named Entity Recognition). Does Sentiment Analysis on those Tweets. Provides some visualizations in an interactive format to get a &#39;pulse&#39; of what&#39;s happening.</td>
+            <td>Flair Models</td>
+            <td>NER, Sentiment Analysis</td>
+            <td>FirmAI</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1WIcVZgbrU0DYOQqaxuaCLKY6CoLBV18O" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Universal Sentence Encoder</td>
+            <td>04.22.20</td>
+            <td>Demo for using Universal Sentence Encoder and use it for sentence similarity and sentence classification tasks</td>
+            <td>Transformer, DAN</td>
+            <td>Universal Sentence Encoder</td>
+            <td>TensorFlow</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/semantic_similarity_with_tf_hub_universal_encoder.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Using Spanish BERT Fine-Tuned for Q&amp;A</td>
+            <td>04.22.20</td>
+            <td>Demo for using Spanish BERT for QA - inference</td>
+            <td>BERT</td>
+            <td>Question Answering</td>
+            <td>Manuel Romero</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/mrm8488/shared_colab_notebooks/blob/master/Using_Spanish_BERT_fine_tuned_for_Q%26A_pipelines.ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Word2Vec-Tensor(NCE_loss)</td>
+            <td>04.22.20</td>
+            <td>Demo for obtaining Word2Vec embeddings</td>
+            <td>NN</td>
+            <td>Embeddings</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/1-2.Word2Vec/Word2Vec_Skipgram_Tensor(NCE_loss).ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Word2Vec-Tensor(Softmax)</td>
+            <td>04.22.20</td>
+            <td>Demo for obtaining Word2Vec embeddings</td>
+            <td>NN</td>
+            <td>Embeddings</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/1-2.Word2Vec/Word2Vec_Skipgram_Tensor(Softmax).ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>Word2Vec-Torch(Softmax)</td>
+            <td>04.22.20</td>
+            <td>Demo for obtaining Word2Vec embeddings</td>
+            <td>NN</td>
+            <td>Embeddings</td>
+            <td>Tae Hwan Jung</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/1-2.Word2Vec/Word2Vec_Skipgram_Torch(Softmax).ipynb" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+
+        <tr>
+            <td>XLNet Toxic Comment Classification Challenge</td>
+            <td>04.22.20</td>
+            <td>Demo for training and inference using XLNet classifier on the Toxic comments dataset</td>
+            <td>XLNet</td>
+            <td>Text Classification</td>
+            <td>Amber Bhanarkar</td>
+            <td>
+                <div class="qs-button">
+                    <a href="https://colab.research.google.com/drive/1YXojI6USFGV3498Pygllv0z8vTMVIiEt" target="_blank"><img src="/static/images/colab.svg" /></a>
+                </div>
+            </td>
+
+        </tr>
+        
+        
+    </tbody>
+</table>
+
+    </div>
+</div>
+
+<footer class="qsr-footer">
+    <h3>Copyright &copy;
+        <script type="text/javascript">
+            var d = new Date();
+            document.write(d.getFullYear());               
+        </script> Quantum Stat, LLC. All Rights Reserved.
+        <a href="https://quantumstat.com/privacy-policy/">Privacy Policy</a> |
+        <a href="https://quantumstat.com/terms-conditions/">Terms &amp; Conditions</a>
+    </h3>
+</footer>
+<!-- close footer -->
+ 
+
+     
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/datatables.min.js"></script>
+<script type="text/javascript" src="/static/js/tm.min.js"></script>
+<script type="text/javascript" src="/static/js/notebook.js"></script> 
+  </body>
+</html>
